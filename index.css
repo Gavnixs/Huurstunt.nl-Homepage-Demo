@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components and utilities */
+@layer components {
+  .tab-button {
+    @apply text-primary-500 bg-neutralgray-300;
+  }
+  
+  .tab-button.active {
+    @apply text-primary-900 bg-white;
+  }
+  
+  .tab-button:hover:not(.active) {
+    @apply text-accent-500 bg-white;
+  }
+}
+
+/* Custom focus styles for better accessibility */
+@layer utilities {
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-poppins text-gray-800 bg-white;
+  }
+}
